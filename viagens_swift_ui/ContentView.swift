@@ -9,8 +9,28 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!\nPrimeira aprendizado com SwiftUi")
-            .padding()
+        VStack{
+            Text("Viagens")
+                .foregroundColor(Color.white)
+                .font(.custom("Avenir Black", size: 20))
+            Text("Especial")
+                .foregroundColor(Color.white)
+                .font(.custom("Avenir Book", size: 20))
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                .padding(.leading, 30)
+            Text("BRASIL")
+                .foregroundColor(Color.white)
+                .font(.custom("Avenir Black", size: 20))
+                .padding(.leading, 30)
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+            List{
+                Text("Rio de Janeiro")
+                Text("Ceara")
+                Text("Sousa")
+                Text("aracaju")
+            }
+        }
+        .background(Color.purple)
     }
 }
 
