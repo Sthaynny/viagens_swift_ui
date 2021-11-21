@@ -9,35 +9,43 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack{
             GeometryReader{ view in
                 VStack{
-                    Text("Viagens")
-                        .foregroundColor(Color.white)
-                        .font(.custom("Avenir Black", size: 26))
-                        .padding(.top, 50)
-                    Text("Especial")
-                        .foregroundColor(Color.white)
-                        .font(.custom("Avenir Book", size: 20))
-                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                        .padding(.leading, 30)
-                    Text("BRASIL")
-                        .foregroundColor(Color.white)
-                        .font(.custom("Avenir Black", size: 20))
-                        .padding(.leading, 30)
-                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                    HeaderView(width: view.size.width)
+                    HStack{
+                        Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+                            Text("Hotéis")
+                                .foregroundColor(Color.white)
+                                .font(.custom("Avenir Medium", size: 17))
+                        }
+                        .frame(width: 100, height: 50)
+                        .background(Color.blue)
+                        .cornerRadius(15)
+                        .offset(x: 60)
+                        
+                        Spacer()
+                        
+                        Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+                            Text("Pacotes")
+                                .foregroundColor(Color.white)
+                                .font(.custom("Avenir Medium", size: 17))
+                        }.frame(width: 100, height: 50)
+                        .background(Color.orange)
+                        .cornerRadius(15.0)
+                        .offset(x: -60)
+                    }
+                    .offset(y: -30)
                     
+                    List{
+                        Text("Rio de Janeiro")
+                        Text("Ceara")
+                        Text("Sousa")
+                        Text("aracaju")
+                    }
                 }
-                .frame(width: view.size.width, height: 180, alignment: .top)
-                .background(Color.purple)
                 .edgesIgnoringSafeArea(.all)
-            }
-            List{
-                Text("Rio de Janeiro")
-                Text("Ceara")
-                Text("Sousa")
-                Text("aracaju")
-            }
+            
+            
         }
         
     }

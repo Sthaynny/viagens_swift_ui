@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F17BD93274ACB9900D047FB /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F17BD92274ACB9900D047FB /* HeaderView.swift */; };
 		3FA91AA5274AAC0D007B4DC4 /* viagens_swift_uiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA91AA4274AAC0D007B4DC4 /* viagens_swift_uiApp.swift */; };
 		3FA91AA7274AAC0D007B4DC4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA91AA6274AAC0D007B4DC4 /* ContentView.swift */; };
 		3FA91AA9274AAC0E007B4DC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FA91AA8274AAC0E007B4DC4 /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F17BD92274ACB9900D047FB /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		3FA91AA1274AAC0D007B4DC4 /* viagens_swift_ui.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = viagens_swift_ui.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FA91AA4274AAC0D007B4DC4 /* viagens_swift_uiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viagens_swift_uiApp.swift; sourceTree = "<group>"; };
 		3FA91AA6274AAC0D007B4DC4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,6 +34,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F17BD91274ACB7C00D047FB /* components */ = {
+			isa = PBXGroup;
+			children = (
+				3F17BD92274ACB9900D047FB /* HeaderView.swift */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
 		3FA91A98274AAC0D007B4DC4 = {
 			isa = PBXGroup;
 			children = (
@@ -51,6 +61,7 @@
 		3FA91AA3274AAC0D007B4DC4 /* viagens_swift_ui */ = {
 			isa = PBXGroup;
 			children = (
+				3F17BD91274ACB7C00D047FB /* components */,
 				3FA91AA4274AAC0D007B4DC4 /* viagens_swift_uiApp.swift */,
 				3FA91AA6274AAC0D007B4DC4 /* ContentView.swift */,
 				3FA91AA8274AAC0E007B4DC4 /* Assets.xcassets */,
@@ -138,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FA91AA7274AAC0D007B4DC4 /* ContentView.swift in Sources */,
+				3F17BD93274ACB9900D047FB /* HeaderView.swift in Sources */,
 				3FA91AA5274AAC0D007B4DC4 /* viagens_swift_uiApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
