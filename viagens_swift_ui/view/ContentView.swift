@@ -19,13 +19,16 @@ struct ContentView: View {
                     HeaderView()
                         .frame(width: view.size.width, height: _isCompact ? 210 : 310, alignment: .top)
                     List(viagens){ viagem in
-                        CellListView(viagem: viagem)
-                    }
+                        NavigationLink(destination: MapaView(coordenada: viagem.localizacao).navigationBarTitle("Localização")){
+                            CellListView(viagem: viagem)
+                        }
+                    }.navigationBarTitle("")
                 }
                 .edgesIgnoringSafeArea(.all)
             }
     
         }
+        .navigationViewStyle(StackNavigationViewStyle())
         
     }
 }
