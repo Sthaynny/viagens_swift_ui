@@ -11,10 +11,7 @@ struct ContentView: View {
     var body: some View {
             GeometryReader{ view in
                 VStack{
-                    HeaderView(width: view.size.width)
-                    BotoesHeaderView()
-                    .offset(y: -30)
-                    
+                    HeaderView()
                     ListaViagensView()
                     .offset(y: -30)
                 }
