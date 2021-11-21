@@ -8,28 +8,31 @@
 import SwiftUI
 
 struct HeaderView: View {
-    
+    @Environment(\.horizontalSizeClass) var _horizontalSizeClass
+    var _isCompact: Bool{
+        return self._horizontalSizeClass == .compact
+    }
     var body: some View {
         GeometryReader{ view in
             VStack{
                 VStack{
                     Text("Viagens")
                         .foregroundColor(Color.white)
-                        .font(.custom("Avenir Black", size: 26))
-                        .padding(.top, 50)
+                        .font(.custom("Avenir Black", size: _isCompact ? 26: 36))
+                        .padding(.top, _isCompact ? 50: 90)
                     Text("Especial")
                         .foregroundColor(Color.white)
-                        .font(.custom("Avenir Book", size: 20))
+                        .font(.custom("Avenir Book", size: _isCompact ? 20 : 30))
                         .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                         .padding(.leading, 30)
                     Text("BRASIL")
                         .foregroundColor(Color.white)
-                        .font(.custom("Avenir Black", size: 20))
+                        .font(.custom("Avenir Black", size: _isCompact ? 20 : 30))
                         .padding(.leading, 30)
                         .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                     
                 }
-                .frame(width: view.size.width, height: 180, alignment: .top)
+                .frame(width: view.size.width, height: _isCompact ? 180 : 250, alignment: .top)
                 .background(Color.purple)
                 
                 BotoesHeaderView()
@@ -43,9 +46,17 @@ struct HeaderView: View {
 
 
 struct HeaderView_Previews: PreviewProvider {
+    
     static var previews: some View {
-        HeaderView()
-            .previewLayout(.fixed(width: 400, height: 220))
+        
+        Group{
+            HeaderView()
+                .environment(\.horizontalSizeClass, .compact)
+                .previewLayout(.fixed(width: 400, height: 220))
+            HeaderView()
+                .environment(\.horizontalSizeClass, .regular)
+                .previewLayout(.fixed(width: 900 , height: 310))
+        }
     }
 }
 

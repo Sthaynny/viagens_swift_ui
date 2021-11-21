@@ -8,12 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
+    @Environment(\.horizontalSizeClass) var _horizontalSizeClass
+    var _isCompact: Bool{
+        return self._horizontalSizeClass == .compact
+    }
     var body: some View {
             GeometryReader{ view in
                 VStack{
                     HeaderView()
+                        .frame(width: view.size.width, height: _isCompact ? 210 : 310, alignment: .top)
                     ListaViagensView()
-                    .offset(y: -30)
                 }
                 .edgesIgnoringSafeArea(.all)
             
