@@ -13,6 +13,7 @@ struct ListaViagensView: View {
         return self._horizontalSizeClass == .compact
     }
     var body: some View {
+        
         List(viagens){ viagem in
             VStack(alignment: .leading){
                 Text(viagem.titulo)

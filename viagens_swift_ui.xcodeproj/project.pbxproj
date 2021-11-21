@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3F0FE600274AD15B00B0A829 /* ListaViagensView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0FE5FF274AD15B00B0A829 /* ListaViagensView.swift */; };
 		3F0FE602274AD1D800B0A829 /* BotoesHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0FE601274AD1D800B0A829 /* BotoesHeaderView.swift */; };
+		3F0FE604274ADCF600B0A829 /* MapaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0FE603274ADCF600B0A829 /* MapaView.swift */; };
 		3F17BD93274ACB9900D047FB /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F17BD92274ACB9900D047FB /* HeaderView.swift */; };
 		3F17BD97274ACD0200D047FB /* Dados.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F17BD95274ACD0200D047FB /* Dados.swift */; };
 		3F17BD98274ACD0200D047FB /* Viagem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F17BD96274ACD0200D047FB /* Viagem.swift */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		3F0FE5FF274AD15B00B0A829 /* ListaViagensView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaViagensView.swift; sourceTree = "<group>"; };
 		3F0FE601274AD1D800B0A829 /* BotoesHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotoesHeaderView.swift; sourceTree = "<group>"; };
+		3F0FE603274ADCF600B0A829 /* MapaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapaView.swift; sourceTree = "<group>"; };
 		3F17BD92274ACB9900D047FB /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		3F17BD95274ACD0200D047FB /* Dados.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dados.swift; sourceTree = "<group>"; };
 		3F17BD96274ACD0200D047FB /* Viagem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Viagem.swift; sourceTree = "<group>"; };
@@ -44,6 +46,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F0FE605274ADE6E00B0A829 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				3F0FE603274ADCF600B0A829 /* MapaView.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		3F17BD91274ACB7C00D047FB /* components */ = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +93,7 @@
 		3FA91AA3274AAC0D007B4DC4 /* viagens_swift_ui */ = {
 			isa = PBXGroup;
 			children = (
+				3F0FE605274ADE6E00B0A829 /* view */,
 				3F17BD94274ACD0200D047FB /* Models */,
 				3F17BD91274ACB7C00D047FB /* components */,
 				3FA91AA4274AAC0D007B4DC4 /* viagens_swift_uiApp.swift */,
@@ -176,6 +187,7 @@
 				3F0FE600274AD15B00B0A829 /* ListaViagensView.swift in Sources */,
 				3FA91AA7274AAC0D007B4DC4 /* ContentView.swift in Sources */,
 				3F17BD97274ACD0200D047FB /* Dados.swift in Sources */,
+				3F0FE604274ADCF600B0A829 /* MapaView.swift in Sources */,
 				3F17BD93274ACB9900D047FB /* HeaderView.swift in Sources */,
 				3FA91AA5274AAC0D007B4DC4 /* viagens_swift_uiApp.swift in Sources */,
 				3F0FE602274AD1D800B0A829 /* BotoesHeaderView.swift in Sources */,
