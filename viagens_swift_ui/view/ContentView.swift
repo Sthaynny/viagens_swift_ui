@@ -13,14 +13,18 @@ struct ContentView: View {
         return self._horizontalSizeClass == .compact
     }
     var body: some View {
+        NavigationView{
             GeometryReader{ view in
                 VStack{
                     HeaderView()
                         .frame(width: view.size.width, height: _isCompact ? 210 : 310, alignment: .top)
-                    ListaViagensView()
+                    List(viagens){ viagem in
+                        CellListView(viagem: viagem)
+                    }
                 }
                 .edgesIgnoringSafeArea(.all)
-            
+            }
+    
         }
         
     }
