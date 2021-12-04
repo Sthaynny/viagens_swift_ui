@@ -13,22 +13,19 @@ struct ContentView: View {
         return self._horizontalSizeClass == .compact
     }
     var body: some View {
-        NavigationView{
-            GeometryReader{ view in
-                VStack{
-                    HeaderView()
-                        .frame(width: view.size.width, height: _isCompact ? 210 : 310, alignment: .top)
-                    List(viagens){ viagem in
-                        NavigationLink(destination: MapaView(coordenada: viagem.localizacao).navigationBarTitle("Localização")){
-                            CellListView(viagem: viagem)
-                        }
-                    }.navigationBarTitle("")
+        TabView {
+            DestaqueView()
+                .tabItem {
+                    Text("Destaques")
+                    Image("icone-destaques")
                 }
-                .edgesIgnoringSafeArea(.all)
-            }
-    
+
+            ListaDePacotesView()
+                .tabItem {
+                    Text("Pacotes")
+                    Image("icone-mala")
+                }
         }
-        .navigationViewStyle(StackNavigationViewStyle())
         
     }
 }
